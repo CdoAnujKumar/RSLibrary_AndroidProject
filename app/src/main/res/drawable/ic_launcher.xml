@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+
+    <!-- Background circle -->
+    <path
+        android:fillColor="#1976d2"
+        android:pathData="M0,0 L108,0 L108,108 L0,108 Z" />
+
+    <!-- Book body -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M30,25 L30,83 Q30,87 34,87 L76,87 Q80,87 80,83 L80,25 Q80,21 76,21 L34,21 Q30,21 30,25 Z" />
+
+    <!-- Book spine -->
+    <path
+        android:fillColor="#1565c0"
+        android:pathData="M30,21 L38,21 L38,87 L30,87 Z" />
+
+    <!-- Lines on book -->
+    <path
+        android:fillColor="#e3f2fd"
+        android:pathData="M44,35 L74,35 Q75,35 75,36.5 Q75,38 74,38 L44,38 Q43,38 43,36.5 Q43,35 44,35 Z" />
+    <path
+        android:fillColor="#e3f2fd"
+        android:pathData="M44,44 L74,44 Q75,44 75,45.5 Q75,47 74,47 L44,47 Q43,47 43,45.5 Q43,44 44,44 Z" />
+    <path
+        android:fillColor="#e3f2fd"
+        android:pathData="M44,53 L74,53 Q75,53 75,54.5 Q75,56 74,56 L44,56 Q43,56 43,54.5 Q43,53 44,53 Z" />
+    <path
+        android:fillColor="#e3f2fd"
+        android:pathData="M44,62 L62,62 Q63,62 63,63.5 Q63,65 62,65 L44,65 Q43,65 43,63.5 Q43,62 44,62 Z" />
+
+    <!-- RS text hint -->
+    <path
+        android:fillColor="#2ecc71"
+        android:pathData="M54,70 Q54,68 56,68 Q58,68 58,70 L58,78 Q58,80 56,80 Q54,80 54,78 Z" />
+
+</vector>
