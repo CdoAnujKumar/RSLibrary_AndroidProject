@@ -2,5 +2,5 @@
 <resources>
     <string name="app_name">RS Library</string>
     <!-- Get this from Firebase Console → Project Settings → Your apps → Web app → OAuth 2.0 Client ID -->
-    <string name="default_web_client_id">988319651464-REPLACE_WITH_WEB_CLIENT_ID.apps.googleusercontent.com</string>
+    <string name="default_web_client_id">988319651464-6434smftc6k3m4vrbpq3nmpbeggrm13u.apps.googleusercontent.com</string>
 </resources>
