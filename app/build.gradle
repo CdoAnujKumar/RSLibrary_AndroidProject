@@ -22,7 +22,7 @@ android {
             // To build a signed release APK, configure signingConfig here
         }
         debug {
-            applicationIdSuffix ".debug"
+            
         }
     }
 
