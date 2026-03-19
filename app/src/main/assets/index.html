@@ -139,7 +139,7 @@
 </section>  <div id="owner-folder-view" class="wizard-overlay"><button class="btn btn-black" onclick="document.getElementById('owner-folder-view').classList.remove('show')">← Back</button><div id="folder-content"></div></div>  
 <script type="module">  
   import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js";  
-  import { getAuth, GoogleAuthProvider, signInWithPopup, onAuthStateChanged, signOut } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-auth.js";  
+  import { getAuth, GoogleAuthProvider, signInWithRedirect, getRedirectResult, onAuthStateChanged, signOut } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-auth.js";  
   import { getFirestore, doc, setDoc, getDoc, collection, onSnapshot, deleteDoc, arrayUnion, updateDoc } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.js";  const firebaseConfig = {
 apiKey: "AIzaSyDjn6u195jqewM53qb2xnrPruFnMOELAcc",
 authDomain: "rakshapal-singh-library-ded2e.firebaseapp.com",
@@ -251,6 +251,18 @@ return out || "No payment history.";
 };
 
 // --- Auth & Data Listener ---
+// Handle redirect result first (runs after Google redirects back)
+getRedirectResult(auth).then(result => {
+  if (result && result.user) {
+    console.log("Google Sign-In successful via redirect");
+  }
+}).catch(error => {
+  if (error.code !== 'auth/no-current-user') {
+    console.error("Redirect sign-in error:", error.message);
+    alert("Sign-in error: " + error.message);
+  }
+});
+
 onAuthStateChanged(auth, async (user) => {
 if(user) {
 const uRef = doc(db, "users", user.uid);
@@ -371,7 +383,7 @@ document.querySelectorAll('.sig-timer').forEach(async el => {
     });
   }, 1000);
 
-  window.login = () => signInWithPopup(auth, provider);
+  window.login = () => signInWithRedirect(auth, provider);
   window.logout = async () => { 
     if(auth.currentUser) await updateDoc(doc(db, "users", auth.currentUser.uid), { isOnline: false }); 
     signOut(auth).then(()=>location.reload()); 
