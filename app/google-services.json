@@ -33,35 +33,6 @@
           ]
         }
       }
-    },
-    {
-      "client_info": {
-        "mobilesdk_app_id": "1:988319651464:android:477fa283cddb1d1123713e",
-        "android_client_info": {
-          "package_name": "com.rakshapalsingh.library.debug"
-        }
-      },
-      "oauth_client": [
-        {
-          "client_id": "988319651464-web.apps.googleusercontent.com",
-          "client_type": 3
-        }
-      ],
-      "api_key": [
-        {
-          "current_key": "AIzaSyDjn6u195jqewM53qb2xnrPruFnMOELAcc"
-        }
-      ],
-      "services": {
-        "appinvite_service": {
-          "other_platform_oauth_client": [
-            {
-              "client_id": "988319651464-web.apps.googleusercontent.com",
-              "client_type": 3
-            }
-          ]
-        }
-      }
     }
   ],
   "configuration_version": "1"
