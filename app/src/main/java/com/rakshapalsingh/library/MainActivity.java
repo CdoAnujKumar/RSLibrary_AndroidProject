@@ -96,9 +96,9 @@ public class MainActivity extends AppCompatActivity {
         });
 
         // Enable Chrome DevTools debugging in debug builds
-        if (BuildConfig.DEBUG) {
+        
             WebView.setWebContentsDebuggingEnabled(true);
-        }
+        
 
         webView.setWebChromeClient(new WebChromeClient());
     }
