@@ -96,9 +96,9 @@ public class MainActivity extends AppCompatActivity {
         });
 
         // Enable Chrome DevTools debugging in debug builds
-        
-        WebView.setWebContentsDebuggingEnabled(true);
-        
+        if (BuildConfig.DEBUG) {
+            WebView.setWebContentsDebuggingEnabled(true);
+        }
 
         webView.setWebChromeClient(new WebChromeClient());
     }
@@ -283,4 +283,4 @@ public class MainActivity extends AppCompatActivity {
             super.onBackPressed();
         }
     }
-}
+    }
