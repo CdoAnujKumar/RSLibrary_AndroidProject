@@ -58,24 +58,3 @@ jobs:
         with:
           name: RSLibrary-APK
           path: app/build/outputs/apk/debug/app-debug.apk
-```
-
-Tap **Commit changes**
-
----
-
-## Step 2 — Run and Get the BASE64
-
-1. Go to **Actions** tab
-2. Wait for build to finish ✅
-3. Tap the finished run
-4. Tap **"Generate and print keystore"** step to expand it
-5. You will see output like this:
-```
-======= SHA1 =======
-SHA1: AB:CD:12:34:...
-======= BASE64 START =======
-MIIKAAIBAzCCCboGCSqGSIb3DQEHAaCCCa...
-(many lines of random text)
-...very long text...
-======= BASE64 END =======
