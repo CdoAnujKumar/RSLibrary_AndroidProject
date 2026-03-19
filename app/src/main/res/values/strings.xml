@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">RS Library</string>
+    <string name="wifi_permission_rationale">Location permission is needed to suggest Wi-Fi networks on Android.</string>
+    <string name="wifi_suggest_success">📶 Check your notifications to connect to Library Wi-Fi!</string>
+    <string name="wifi_forget_success">Library Wi-Fi removed from your device.</string>
+</resources>

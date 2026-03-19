@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="AppTheme" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <item name="colorPrimary">#1976d2</item>
+        <item name="colorPrimaryDark">#1565c0</item>
+        <item name="colorAccent">#2ecc71</item>
+        <item name="android:windowBackground">#f4f7f6</item>
+        <item name="android:statusBarColor">#1565c0</item>
+    </style>
+
+    <!-- Splash screen: full blue, no title bar, no flicker -->
+    <style name="SplashTheme" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <item name="android:windowBackground">#1976d2</item>
+        <item name="android:statusBarColor">#1565c0</item>
+        <item name="android:navigationBarColor">#1976d2</item>
+        <item name="colorPrimary">#1976d2</item>
+        <item name="colorPrimaryDark">#1565c0</item>
+    </style>
+</resources>
