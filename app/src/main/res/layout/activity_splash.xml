@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:background="#1976d2">
+
+    <!-- Book Icon -->
+    <ImageView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/ic_launcher"
+        android:layout_marginBottom="24dp" />
+
+    <!-- App Name -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Rakshapal Singh Library"
+        android:textColor="#FFFFFF"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:letterSpacing="0.05" />
+
+    <!-- Tagline -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Member Management System"
+        android:textColor="#B3E5FC"
+        android:textSize="13sp"
+        android:layout_marginTop="6dp" />
+
+    <!-- Loading dots -->
+    <ProgressBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="48dp"
+        android:indeterminateTint="#FFFFFF"
+        style="?android:attr/progressBarStyleSmall" />
+
+</LinearLayout>
