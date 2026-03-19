@@ -97,7 +97,7 @@ public class MainActivity extends AppCompatActivity {
 
         // Enable Chrome DevTools debugging in debug builds
         
-            WebView.setWebContentsDebuggingEnabled(true);
+        WebView.setWebContentsDebuggingEnabled(true);
         
 
         webView.setWebChromeClient(new WebChromeClient());
