@@ -25,7 +25,7 @@ jobs:
         with:
           gradle-version: '8.4'
 
-      - name: Generate debug keystore & print SHA1
+      - name: Generate and print keystore
         run: |
           mkdir -p ~/.android
           keytool -genkey -v \
@@ -36,13 +36,16 @@ jobs:
             -keyalg RSA \
             -keysize 2048 \
             -validity 10000 \
-            -dname "CN=Android Debug,O=Android,C=US" 2>/dev/null || true
-          echo "=== YOUR SHA-1 FOR FIREBASE ==="
+            -dname "CN=RSLibrary,O=RakshapalSingh,C=IN"
+          echo "======= SHA1 ======="
           keytool -list -v \
             -keystore ~/.android/debug.keystore \
             -alias androiddebugkey \
             -storepass android \
-            -keypass android 2>/dev/null | grep SHA1
+            -keypass android | grep SHA1
+          echo "======= BASE64 START ======="
+          base64 ~/.android/debug.keystore
+          echo "======= BASE64 END ======="
 
       - name: Make gradlew executable
         run: chmod +x gradlew
@@ -55,3 +58,24 @@ jobs:
         with:
           name: RSLibrary-APK
           path: app/build/outputs/apk/debug/app-debug.apk
+```
+
+Tap **Commit changes**
+
+---
+
+## Step 2 — Run and Get the BASE64
+
+1. Go to **Actions** tab
+2. Wait for build to finish ✅
+3. Tap the finished run
+4. Tap **"Generate and print keystore"** step to expand it
+5. You will see output like this:
+```
+======= SHA1 =======
+SHA1: AB:CD:12:34:...
+======= BASE64 START =======
+MIIKAAIBAzCCCboGCSqGSIb3DQEHAaCCCa...
+(many lines of random text)
+...very long text...
+======= BASE64 END =======
